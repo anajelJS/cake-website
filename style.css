@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background:
+        radial-gradient(circle at 12% 8%, #f7e4ea 0, transparent 32%),
+        radial-gradient(circle at 88% 92%, #efe3c8 0, transparent 30%),
+        radial-gradient(circle at 2px 2px, rgba(196, 92, 122, 0.09) 1.1px, transparent 1.4px),
+        #f8f1e8;
+    background-size: auto, auto, 18px 18px, auto;
+    color: #5c3d2e;
+    margin: 0;
+    padding: 32px 16px 48px;
+}
+
+.page {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #c45c7a;
+    text-align: center;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 180px;
+    height: 10px;
+    margin: 10px auto 18px;
+    background:
+        radial-gradient(circle at 8px 5px, #e8c9d2 3.2px, transparent 3.4px) 0 0 / 16px 10px,
+        radial-gradient(circle at 0 5px, transparent 3.2px, #e8c9d2 3.4px, transparent 3.6px) 8px 0 / 16px 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+.flavor-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.flavor-nav a {
+    text-decoration: none;
+    color: #c45c7a;
+    background: #fffdf8;
+    border: 2px solid #e8c9d2;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+.flavor-nav a.active,
+.flavor-nav a:hover {
+    background: #e89ab0;
+    color: #fff;
+    border-color: #e89ab0;
+}
+
+.showcase {
+    --r: 10px;
+    --lace: #fffaf4;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    padding: calc(12px + var(--r)) calc(16px + var(--r)) calc(16px + var(--r));
+    margin-bottom: 28px;
+    text-align: center;
+    filter: drop-shadow(0 8px 16px rgba(139, 90, 98, 0.14));
+    background-color: transparent;
+    background-image:
+        radial-gradient(var(--r) at 50% var(--r), var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at 50% calc(100% - var(--r)), var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at var(--r) 50%, var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at calc(100% - var(--r)) 50%, var(--lace) 98%, transparent 101%),
+        linear-gradient(var(--lace), var(--lace));
+    background-size:
+        calc(var(--r) * 2) var(--r),
+        calc(var(--r) * 2) var(--r),
+        var(--r) calc(var(--r) * 2),
+        var(--r) calc(var(--r) * 2),
+        calc(100% - var(--r) * 2) calc(100% - var(--r) * 2);
+    background-position:
+        calc(var(--r) * -1) 0,
+        calc(var(--r) * -1) 100%,
+        0 calc(var(--r) * -1),
+        100% calc(var(--r) * -1),
+        center;
+    background-repeat:
+        repeat-x,
+        repeat-x,
+        repeat-y,
+        repeat-y,
+        no-repeat;
+}
+
+.order-form {
+    --r: 12px;
+    --lace: #fffdf8;
+    position: relative;
+    isolation: isolate;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: calc(30px + var(--r));
+    filter: drop-shadow(0 10px 22px rgba(139, 90, 98, 0.16));
+    background-image:
+        radial-gradient(var(--r) at 50% var(--r), var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at 50% calc(100% - var(--r)), var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at var(--r) 50%, var(--lace) 98%, transparent 101%),
+        radial-gradient(var(--r) at calc(100% - var(--r)) 50%, var(--lace) 98%, transparent 101%),
+        linear-gradient(var(--lace), var(--lace));
+    background-size:
+        calc(var(--r) * 2) var(--r),
+        calc(var(--r) * 2) var(--r),
+        var(--r) calc(var(--r) * 2),
+        var(--r) calc(var(--r) * 2),
+        calc(100% - var(--r) * 2) calc(100% - var(--r) * 2);
+    background-position:
+        calc(var(--r) * -1) 0,
+        calc(var(--r) * -1) 100%,
+        0 calc(var(--r) * -1),
+        100% calc(var(--r) * -1),
+        center;
+    background-repeat:
+        repeat-x,
+        repeat-x,
+        repeat-y,
+        repeat-y,
+        no-repeat;
+}
+
+.order-form::before {
+    content: '';
+    position: absolute;
+    inset: calc(var(--r) + 6px);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    background:
+        radial-gradient(circle at 3px 3px, rgba(196, 92, 122, 0.16) 1.15px, transparent 1.4px) 0 0 / 14px 14px,
+        radial-gradient(circle, transparent 4px, rgba(196, 92, 122, 0.07) 4.3px, transparent 5px) 7px 7px / 14px 14px;
+}
+
+.order-form::after {
+    content: '';
+    position: absolute;
+    inset: calc(var(--r) + 10px);
+    z-index: 0;
+    pointer-events: none;
+    border: 1.5px dashed rgba(196, 92, 122, 0.38);
+    border-radius: 12px;
+}
+
+.order-form > * {
+    position: relative;
+    z-index: 1;
+}
+
+.order-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 2px solid #e8c9d2;
+    border-radius: 14px;
+    background: rgba(255, 250, 244, 0.92);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.order-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.order-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 999px;
+    background: #e89ab0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.04em;
+}
+
+.order-form button:hover {
+    background: #c45c7a;
+}
+
+.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0 0 16px;
+    font-weight: 600;
+}
+
+.errors {
+    background: #fdecea;
+    color: #b71c1c;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.errors p {
+    margin: 4px 0;
+}
